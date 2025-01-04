@@ -1,4 +1,6 @@
-import Header from "./component/Header";
+import React from 'react';
+import './index.css';
+
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import { BrowserRouter, Route, Routes } from "react-router-dom";

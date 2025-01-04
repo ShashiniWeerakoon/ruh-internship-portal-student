@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUser, FaFolderOpen, FaBook, FaClipboard, FaSortNumericDown, FaBullhorn, FaBuilding, FaComments, FaChalkboardTeacher, FaJournalWhills } from 'react-icons/fa';
+import { FaUser, FaBook, FaBriefcase, FaClipboard, FaSortNumericDown, FaInfoCircle, FaJournalWhills, FaComments } from 'react-icons/fa';
 import styles from '../styles/sidebar.module.css';
 
 export default function Sidebar() {
@@ -7,35 +7,29 @@ export default function Sidebar() {
     <div className={styles.sidebar}>
       <div className={styles.header}>Dashboard</div>
       <nav className={styles.nav}>
-        <a href="#" className={styles['nav-item']}>
-          <FaUser className={styles['nav-icon']} /> Analyze
+        <a href="/Userprofile" className={styles['nav-item']}>
+          <FaUser className={styles['nav-icon']} /> User Profile
         </a>
-        <a href="#" className={styles['nav-item']}>
-          <FaFolderOpen className={styles['nav-icon']} /> Select Internships
+        <a href="/Instruction" className={styles['nav-item']}>
+          <FaBook className={styles['nav-icon']} /> Instruction
         </a>
-        <a href="#" className={styles['nav-item']}>
-          <FaBook className={styles['nav-icon']} /> Update Instructions
+        <a href="/Internships" className={styles['nav-item']}>
+          <FaBriefcase className={styles['nav-icon']} /> Internships
         </a>
-        <a href="#" className={styles['nav-item']}>
-          <FaClipboard className={styles['nav-icon']} /> Add Internships
+        <a href="/Applynow" className={styles['nav-item']}>
+          <FaClipboard className={styles['nav-icon']} /> Apply Now
         </a>
-        <a href="#" className={styles['nav-item']}>
-          <FaSortNumericDown className={styles['nav-icon']} /> Preference Update
+        <a href="/Currstatus" className={styles['nav-item']}>
+          <FaSortNumericDown className={styles['nav-icon']} /> Current Status
         </a>
-        <a href="#" className={styles['nav-item']}>
-          <FaBullhorn className={styles['nav-icon']} /> Add Notices
+        <a href="/About" className={styles['nav-item']}>
+          <FaInfoCircle className={styles['nav-icon']} /> About Internship
         </a>
-        <a href="#" className={styles['nav-item']}>
-          <FaBuilding className={styles['nav-icon']} /> Company Details
-        </a>
-        <a href="#" className={styles['nav-item']}>
-          <FaComments className={styles['nav-icon']} /> Student Feedbacks
-        </a>
-        <a href="#" className={styles['nav-item']}>
-          <FaChalkboardTeacher className={styles['nav-icon']} /> Supervisor Feedbacks
-        </a>
-        <a href="#" className={styles['nav-item']}>
+        <a href="/Dairy" className={styles['nav-item']}>
           <FaJournalWhills className={styles['nav-icon']} /> Diary Updates
+        </a>
+        <a href="/Feedback" className={styles['nav-item']}>
+          <FaComments className={styles['nav-icon']} /> Feedbacks
         </a>
       </nav>
     </div>

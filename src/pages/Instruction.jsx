@@ -10,8 +10,8 @@ export default function MainContent() {
     <Sidebar />
     
     <div className="flex-grow p-8 overflow-y-auto mt-16 ml-64 ">
-      <h1 className="text-2xl font-bold mb-4 text-center">Instructions</h1>
-      
+      <h1 className="text-2xl font-bold mb-4 text-center">INSTRUCTIONS</h1>
+    <div className="bg-slate-100 p-8 shadow-md rounded-lg w-full max-w-6xl mx-auto">  
     <div className="space-y-6 text-gray-800">
       {/* Introduction */}
       <p>
@@ -123,6 +123,7 @@ export default function MainContent() {
       <p className="mt-6 text-center font-semibold">
         ✅ <strong>Thank You for Using the Internship Management System!</strong>
       </p>
+    </div>
     </div>
     </div>
     </>

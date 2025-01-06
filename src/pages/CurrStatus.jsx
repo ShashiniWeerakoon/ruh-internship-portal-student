@@ -17,7 +17,7 @@ export default function CurrentStatus() {
         <div className="flex flex-1 overflow-hidden">
           <Sidebar />
           <div className="flex-1 flex flex-col mt-[64px] ml-[250px] p-8">
-            <h1 className="text-2xl font-bold mb-4 text-center">Current Status</h1>
+            <h1 className="text-2xl font-bold mb-4 text-center">CURRENT STATUS</h1>
             <div className="flex flex-1 items-center justify-center">
               <div className="bg-slate-100 p-8 shadow-md rounded-lg w-full max-w-md mx-auto">
                 <h3 className="text-lg font-medium mb-4 text-center">Where are you Now</h3>
@@ -47,7 +47,7 @@ export default function CurrentStatus() {
                   <input
                     type="checkbox"
                     id="intern"
-                    onChange={() => handleNavigate('/Dairy')}
+                    onChange={() => handleNavigate('/Diary')}
                   />
                   <label htmlFor="intern" className="ml-2">Intern</label>
                 </div>

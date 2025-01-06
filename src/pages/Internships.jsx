@@ -10,6 +10,7 @@ const InternshipPage = () => {
   const [searchCompany, setSearchCompany] = useState('');
   const [searchDesignation, setSearchDesignation] = useState('');
 
+  // Fetching internship data from the server
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('/api/internships');
@@ -19,10 +20,17 @@ const InternshipPage = () => {
     fetchData();
   }, []);
 
+  // Filtering internships based on search criteria
   const filteredInternships = internships.filter(internship => 
     internship.company.toLowerCase().includes(searchCompany.toLowerCase()) &&
     internship.designation.toLowerCase().includes(searchDesignation.toLowerCase())
   );
+
+  // Handler for search form submission
+  const handleSearch = (e) => {
+    e.preventDefault();
+    // The filter logic is already applied in the filteredInternships variable
+  };
 
   return (
     <div className="flex flex-col h-screen">
@@ -32,7 +40,7 @@ const InternshipPage = () => {
         <div className="flex-1 overflow-y-auto p-8 mt-[64px] ml-[250px]">
           <h1 className="text-2xl font-bold mb-4 text-center">Internships</h1>
           <div className="flex gap-4 mb-4">
-            <div className="flex items-center gap-2">
+            <form onSubmit={handleSearch} className="flex items-center gap-2">
               <span className="text-gray-700">Company:</span>
               <div className="flex items-center border border-gray-300 rounded px-2">
                 <FaSearch className="text-gray-500" />
@@ -44,8 +52,9 @@ const InternshipPage = () => {
                   className="flex-1 p-2 focus:outline-none"
                 />
               </div>
-            </div>
-            <div className="flex items-center gap-2">
+              <button type="submit" className="p-2 bg-[#1E2A30] text-white rounded">Search</button>
+            </form>
+            <form onSubmit={handleSearch} className="flex items-center gap-2">
               <span className="text-gray-700">Designation:</span>
               <div className="flex items-center border border-gray-300 rounded px-2">
                 <FaSearch className="text-gray-500" />
@@ -57,7 +66,8 @@ const InternshipPage = () => {
                   className="flex-1 p-2 focus:outline-none"
                 />
               </div>
-            </div>
+              <button type="submit" className="p-2 bg-[#1E2A30] text-white rounded">Search</button>
+            </form>
           </div>
           <table className="w-full border border-collapse">
             <thead>
@@ -68,8 +78,16 @@ const InternshipPage = () => {
               </tr>
             </thead>
             <tbody>
+              {/* Adding rows with decreased height */}
+              <tr style={{ height: '40px' }}>
+                <td className="border p-2"></td>
+                <td className="border p-2"></td>
+                <td className="border p-2"></td>
+              </tr>
+              
+              {/* Displaying filtered internships */}
               {filteredInternships.map((internship, index) => (
-                <tr key={index}>
+                <tr key={index} style={{ height: '40px' }}>
                   <td className="border p-2">{internship.company}</td>
                   <td className="border p-2">{internship.designation}</td>
                   <td className="border p-2">{internship.timePeriod}</td>

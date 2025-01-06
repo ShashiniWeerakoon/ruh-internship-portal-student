@@ -11,7 +11,7 @@ export default function Sidebar() {
           <FaUser className={styles['nav-icon']} /> User Profile
         </a>
         <a href="/Instruction" className={styles['nav-item']}>
-          <FaBook className={styles['nav-icon']} /> Instruction
+          <FaBook className={styles['nav-icon']} /> Instructions
         </a>
         <a href="/Internships" className={styles['nav-item']}>
           <FaBriefcase className={styles['nav-icon']} /> Internships

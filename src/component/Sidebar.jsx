@@ -25,7 +25,7 @@ export default function Sidebar() {
         <a href="/About" className={styles['nav-item']}>
           <FaInfoCircle className={styles['nav-icon']} /> About Internship
         </a>
-        <a href="/Dairy" className={styles['nav-item']}>
+        <a href="/Diary" className={styles['nav-item']}>
           <FaJournalWhills className={styles['nav-icon']} /> Diary Updates
         </a>
         <a href="/Feedback" className={styles['nav-item']}>

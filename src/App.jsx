@@ -9,6 +9,7 @@ import CurrStatus from "./pages/CurrStatus";
 import About from "./pages/About";
 import Diary from "./pages/Diary";
 import Feedback from "./pages/Feedback";
+import Updatestudentprofile from "./pages/Updatestudentprofile";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<UserProfile />} />
+          <Route path="/" element={<Updatestudentprofile />} />
           <Route path="/Userprofile" element={<UserProfile />} />
           <Route path="/Instruction" element={<Instruction />} />
           <Route path="/Internships" element={<Internships />} />

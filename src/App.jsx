@@ -17,7 +17,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Updatestudentprofile />} />
+          <Route path="/" element={<UserProfile />} />
           <Route path="/Userprofile" element={<UserProfile />} />
           <Route path="/Instruction" element={<Instruction />} />
           <Route path="/Internships" element={<Internships />} />
@@ -26,7 +26,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Diary" element={<Diary />} />
           <Route path="/Feedback" element={<Feedback />} />
-          {/* Kamathi Routes tika dala hadaganna */}
+          <Route path="/Studentprofile" element={<Updatestudentprofile />} />
         </Routes>
       </BrowserRouter>
     </div>

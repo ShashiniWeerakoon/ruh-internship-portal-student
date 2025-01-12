@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [profileImage, setProfileImage] = useState(null);
   const [resultSheet, setResultSheet] = useState(null);
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [showPopup, setShowPopup] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,6 +37,9 @@ export default function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowPopup(true);
+
+    // Navigate to the user profile page after submitting the form
+    navigate("/userprofile");
   };
 
   const closePopup = () => {
@@ -150,7 +155,7 @@ export default function Home() {
 
         <button
           type="submit"
-          className="w-full py-2 px-4 bg-indigo-600 text-white rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 h-9"
+          className="w-full py-2 px-4 bg-[#0F1D2F] text-white rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 h-9"
         >
           Submit
         </button>
@@ -165,7 +170,7 @@ export default function Home() {
       </p>
       <button
         onClick={closePopup}
-        className="w-full py-2 px-4 bg-indigo-600 text-white rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        className="w-full py-2 px-4 bg-[#0F1D2F] text-white rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
       >
         Close
       </button>

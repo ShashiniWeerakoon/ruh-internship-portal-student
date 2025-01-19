@@ -1,6 +1,7 @@
+// MainContent.jsx
 import React from 'react';
-import Header from "../component/Header";
-import Sidebar from "../component/Sidebar";
+import Header from '../component/Header';
+import Sidebar from '../component/Sidebar';
 
 export default function MainContent() {
   return (

@@ -9,6 +9,7 @@ import CurrStatus from "./pages/CurrStatus";
 import About from "./pages/About";
 import Diary from "./pages/Diary";
 import Feedback from "./pages/Feedback";
+import Updatestudentprofile from "./pages/Updatestudentprofile";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Diary" element={<Diary />} />
           <Route path="/Feedback" element={<Feedback />} />
-          {/* Kamathi Routes tika dala hadaganna */}
+          <Route path="/Studentprofile" element={<Updatestudentprofile />} />
         </Routes>
       </BrowserRouter>
     </div>

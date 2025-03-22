@@ -31,7 +31,8 @@ export default function MainContent() {
                   </li>
                   <li>
                     <strong>Forgot Password:</strong> Use the{" "}
-                    <em>Forgot Password</em> link if you're unable to log in.
+                    <em>Forgot Password</em> link if you&apos;re unable to log
+                    in.
                   </li>
                   <li>
                     <strong>Logout:</strong> Click the <em>Logout</em> button at
